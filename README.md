@@ -1,8 +1,14 @@
+# Containers Sync *Fix*
+
+This is a webextension which would **fix** sync firefox containers across multiple devices.
+
+---
+
 ## 2025-08-16
 
-This repo was forked from [ramkumar-kr/containers-sync](https://github.com/ramkumar-kr/containers-sync), which has not been updated since 2019 (6 years ago).
+This repo was forked from [ramkumar-kr/containers-sync](https://github.com/ramkumar-kr/containers-sync), which has the sole purpose of implementing container syncing across devices, and which has not been updated since 2019 (6 years ago).
 
-Currently, Firefox *does* provide container syncing — or at least it tries to.  
+Currently, Firefox *does* provide a default container syncing mechanism — or at least it *tries to*.  
 The problem is that syncing across multiple devices is utterly **broken**:
 
 - It creates endless duplicates.  
@@ -21,14 +27,6 @@ I suspect that while containers are copied by *name* across devices, their **IDs
 2. If (1) is not possible, use container **names** instead of IDs for any container association.  
 
 Since I use **Zen Browser**, I will also check whether the running browser is Zen. In that case, I’ll handle extra scenarios, such as workspace ↔ container associations.
-
----
-
-# Containers Sync
-
-This is a webextension which would sync firefox containers across multiple devices.
-
-[![Get-the-addon-button](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-US/firefox/addon/containers-sync/)
 
 ---
 
