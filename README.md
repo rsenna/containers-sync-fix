@@ -1,15 +1,26 @@
-EDIT: forked from ramkumar-kr/containers-sync, which at the time of this writing has been not modified since 2019 - 6 years ago.
-Firefox provides container syncing - or tries to do so. Problem is it is utterly **broken** when using multiples devices:
-- it generates multiple duplicates
-- anything referring to containers (e.g. default container for new tabs) is associated differently in different devices; meanning, if I config device A to open tabs on container X in my account, when I go to device B setting is instead configured to open tabs on container Y. If I change device B to open tabs on container X as I originally wanted, when I go back to device A now it is set to open in container Z...
+## 2025-08-16
 
-Therefore, since Firefox's default container syncing mechanism seems uterly **broken**, with no hope of being fixed, by idea is to provide a separate syncing mechanism.
+This repo was forked from [ramkumar-kr/containers-sync](https://github.com/ramkumar-kr/containers-sync), which has not been updated since 2019 (6 years ago).
 
-I suspect containers are copied by name between devices, but IDs end up being different somehow. Possible solutions:
-1. Enforce same IDs across devices.
-2. If 1. is not possible, then use container names and not IDs for any type of container aassociation.
+Currently, Firefox *does* provide container syncing — or at least it tries to.  
+The problem is that syncing across multiple devices is utterly **broken**:
 
-Since I use Zen Browser, I will also attempt to check if running browser is Zen; if that is the case, I will take care of extra scenarios, such as workspace vs container association too.
+- It creates endless duplicates.  
+- Container-related settings (e.g. default container for new tabs) are inconsistent between devices. For example:  
+  - On device A, I configure new tabs to open in container **X**.  
+  - On device B, the same setting is instead mapped to container **Y**.  
+  - If I fix device B to use container **X**, when I return to device A the setting has now shifted to container **Z**…  
+
+Because Firefox’s built-in container syncing ends up causing more issues than solving, with little hope of being fixed, my idea is to provide an alternative syncing mechanism.
+
+I suspect that while containers are copied by *name* across devices, their **IDs** end up mismatched.  
+
+### Possible solutions
+
+1. Enforce the same container IDs across devices.  
+2. If (1) is not possible, use container **names** instead of IDs for any container association.  
+
+Since I use **Zen Browser**, I will also check whether the running browser is Zen. In that case, I’ll handle extra scenarios, such as workspace ↔ container associations.
 
 ---
 
