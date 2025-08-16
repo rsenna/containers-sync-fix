@@ -69,7 +69,7 @@ Since I use **Zen Browser**, I will also check whether the running browser is Ze
 
 -  **I have set a preference to open a website in a particular container. Will that also be synced?**
     
-    No. This data is not available to any extensions by the API.
+    ~No. This data is not available to any extensions by the API.~ 2025: I don't think that's the case anymore, so I will try to implement this feature too.
 
 - **Will this extension work with firefox for android?**
 
